@@ -14,16 +14,16 @@ export async function POST() {
       name: "미래",
       company_name: "미토스테라퓨틱스",
       company_url: "https://mitos-thera.com",
-      greeting: "미토콘드리아 기반 신약 개발 정보를 찾고 계신가요? 무엇이든 물어보세요!",
-      avatar_url: null,
+      greeting: "안녕하세요! 저는 미토스테라퓨틱스 AI 영업사원 미래예요 😊\n미토콘드리아 기반 신약 개발에 대해 궁금한 점이 있으신가요?",
+      avatar_url: "/avatar.jpg",
     },
     {
       id: "demo-mitos-healthcare",
-      name: "건이",
+      name: "소연",
       company_name: "미토스헬스케어",
       company_url: "https://mitoshealthcare.com",
-      greeting: "근육 건강기능식품이나 기능성 화장품에 관심 있으신가요? 도와드릴게요!",
-      avatar_url: null,
+      greeting: "안녕하세요! 미토스헬스케어 AI 상담사 소연이에요 😊\n근육 건강식품이나 기능성 화장품에 대해 궁금한 점이 있으신가요?",
+      avatar_url: "/avatar.jpg",
     },
   ];
 

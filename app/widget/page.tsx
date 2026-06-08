@@ -127,9 +127,9 @@ export default function WidgetPage() {
       <div className="flex items-center justify-between px-4 py-3 bg-gray-900 text-white">
         <div className="flex items-center gap-3">
           {botInfo?.avatar_url ? (
-            <img src={botInfo.avatar_url} alt="avatar" className="w-8 h-8 rounded-full object-cover" />
+            <img src={botInfo.avatar_url} alt="avatar" className="w-10 h-10 rounded-full object-cover ring-2 ring-green-400 ring-offset-2 ring-offset-gray-900" />
           ) : (
-            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-sm font-bold">
+            <div className="w-10 h-10 rounded-full bg-pink-400 flex items-center justify-center text-sm font-bold ring-2 ring-pink-300 ring-offset-2 ring-offset-gray-900">
               {botInfo?.name?.[0] || "A"}
             </div>
           )}
@@ -159,11 +159,13 @@ export default function WidgetPage() {
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} items-end gap-2`}>
             {msg.role === "assistant" && (
-              <div className="w-8 h-8 rounded-full bg-gray-900 flex-shrink-0 overflow-hidden flex items-center justify-center text-white text-xs font-bold">
+              <div className="w-9 h-9 rounded-full flex-shrink-0 overflow-hidden shadow-sm">
                 {botInfo?.avatar_url ? (
                   <img src={botInfo.avatar_url} alt="bot" className="w-full h-full object-cover" />
                 ) : (
-                  botInfo?.name?.[0] || "A"
+                  <div className="w-full h-full bg-pink-400 flex items-center justify-center text-white text-xs font-bold">
+                    {botInfo?.name?.[0] || "A"}
+                  </div>
                 )}
               </div>
             )}
